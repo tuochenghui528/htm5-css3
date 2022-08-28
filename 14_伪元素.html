@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        /* 
+            伪元素，表示页面中的一些特殊的并真是存在的元素（特殊的位置）
+                伪元素用 ::开头
+
+                ::first-letter 表示第一个字母
+                ::first-line 表示第一行
+                ::selection  表示选中的内容
+                ::before 元素的开始
+                ::after  元素的最后
+                    -before和after必须结合content属性来使用
+        */
+        p::first-letter {
+            font-size: 50px;
+        }
+
+        p::first-line {
+            background-color: yellow;
+        }
+
+        p::selection {
+            background-color: greenyellow;
+        }
+
+        p::before {
+            content: '我在前面';
+            color: red;
+        }
+        
+        p::after {
+            content: '我在后面';
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>可能很多人理解不了远缘杂交的含义。其实比如说常见的蔷薇科，下面有梨属、苹果属、山楂属、樱属。基本上很难在属间做杂交。（你们看的商品苹果梨，还是一种梨，就是商品名。并不是现代育种技术的产物）</p>
+</body>
+</html>
