@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内元素的盒模型</title>
+    <style>
+        .s1 {
+            background-color: orange;
+            /* 
+                行内元素的盒模型
+                    - 行内元素不支持设置宽度和高度
+                    - 行内元素可以设置padding，但是垂直方向padding不会影响页面布局，会遮住上下元素
+                    border和margin跟padding的效果一样
+            */
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <span class="s1">我是行内元素span</span>
+    <div class="box1"></div>
+</body>
+</html>

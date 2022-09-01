@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的水平布局</title>
+</head>
+<style>
+    .outer {
+        width: 1000px;
+        height: 300px;
+        border: 5px solid #ccc;
+    }
+    .inner {
+        width: 300px;
+        height: 300px;
+        background: #bfa;
+        /* margin-left: 20px; */
+        margin: 0 auto;
+    }
+    /* 
+        元素的水平方向的布局：
+            元素在其父元素中水平方向的位置由以下几个属性共同决定：
+                margin-left
+                border-left
+                padding-left
+                width
+                padding-right
+                border-right
+                margin-right
+                一个元素在其父元素中，水平布局必须要满足以下的等式
+                margin-left+border-left+padding-left+width+padding-right+border-right_margin-right = 其父元素内容区域的宽度（必须满足）
+
+                0 + 0 + 0 + 300 + 0 + 0+ 0 = 1000;
+                    以上等式必须满足，如果相加结果使等式不成立，则称为过度约束，则等式会自动调整
+                    调整情况：
+                        如果这七个值中没有auto的情况，则浏览器会自动调整margin-right值以使等式成立
+                    这七个值中有三个值可以设置为auto
+                        width
+                        margin-left
+                        margin-right
+                        如果某个值为auto,则会自动调整值为auto的那个值以使等式成立
+                        0 + 0 + 0 + auto + 0 + 0 + 0 = 1000； auto=1000
+                        0 + 0 + 0 + auto + 0 + 0 + 300 = 1000； auto=700
+                        300 + 0 + 0 + auto + 0 + 0 + 300 = 1000； auto=400
+                        auto + 0 + 0 + 300 + 0 + 0 + auto = 1000； auto=350(这就是marhin: 0 auto可以水平居中的原理)
+
+    */
+</style>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
