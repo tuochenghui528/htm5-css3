@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的其他特点</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            float: left;
+            /* 
+                浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围
+                    所以我们可以利用浮动来设置文字环绕图片的效果
+            */
+        }
+        .box2 {
+            background-color: yellowgreen;
+            float: left;
+            /* 
+                元素设置浮动以后，将会从文档流中脱离，元素的一些特点也会随着改变
+                    元素不在独占一行
+                    块元素和行内元素没有严格的区分，都一样不在独占一行，可设置宽高
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <p>
+        要增强自主创新能力，进一步加强基础研究、应用研究和科技成果转化，强化重大创新成果迭代应用，实行“揭榜挂帅”、“赛马”等制度，压茬推进关键核心技术攻关。强化科技创新制度保障，优化企业创新生态和激励引导机制，加大人才培养力度，着力构建以企业为主体、市场为导向、产学研相结合的技术创新体系。做大做强做优数字经济，深入推进传统产业数字化转型和数字产业创新发展。适度超前布局国家重大科技基础设施，加快建设高水平创新平台，打造区域创新高地。以全球视野谋划和推动创新，积极开展基础理论和产业创新国际合作，全面提高我国科技创新的全球化水平和国际影响力。
+    </p>
+    <div class="box2"></div>
+    <span class="sp1"></span>
+</body>
+</html>
