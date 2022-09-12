@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粘滞定位</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 800px;
+            border: 10px solid tomato;
+        }
+        .box {
+            width: 1000px;
+            height: 50px;
+            background-color: #bfa;
+            margin: 100px auto;
+            position: sticky;
+            top: 10px;
+            /* 滚动条滚到距离浏览器顶部10px的时候  box固定不动 */
+            /* 
+                粘滞定位(兼容性不好)
+                    -当元素的position属性值设置为sticky时则开启了元素的粘滞定位
+                    - 粘滞定位和相对定位的特点基本一样
+                        不同的时粘滞定位可以在元素到达某个位置时将其固定
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
