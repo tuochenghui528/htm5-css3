@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度塌陷的最终解决方案</title>
+    <style>
+        .box1 {
+            border: 10px solid tomato;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            float: left;
+        }
+        .box1::after {
+            content: '';
+            display: block;
+            clear: both;
+            /* 
+                ::border: 相当于在box1的最后添加了一个元素box3;
+                    因为::after生成的元素是行内元素所以要display:block
+                    最后clear:both来清楚浮动
+                    相当于.box3{clear: both}效果
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <!-- <div class="box3"></div> -->
+    </div>
+</body>
+</html>
