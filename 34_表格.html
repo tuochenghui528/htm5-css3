@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+<style>
+    table {
+        width: 50%;
+        border: 1px solid black;
+        /* border-spacing  指定边框之间的距离 */
+        border-spacing: 20px;
+        /* border-collapse: collapse; 设置边框合并 */
+        border-collapse: collapse;
+    }
+    td {
+        height: 100px;
+        /* 默认情况下元素在td中是垂直居中的 可以通过vertical-align来设置 */
+        vertical-align: top;
+        text-align: center;
+    }
+    tr:nth-child(2n) {
+        background-color: #bfa;
+    }
+</style>
+
+<body>
+    <table border="1" width="50%" align="center">
+        <thead>
+            <th>测试1</th>
+            <th>测试2</th>
+            <th>测试3</th>
+            <th>测试4</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+                <td>D1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+                <!-- rowspan纵向单元格合并 -->
+                <td rowspan="2">D2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+            <tr>
+                <td>A4</td>
+                <td>B4</td>
+                <!-- colspan横向合并 -->
+                <td colspan="2">C4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>foot1</td>
+            <td>foot2</td>
+            <td>foot3</td>
+            <td>foot4</td>
+        </tfoot>
+    </table>
+</body>
+
+</html>
