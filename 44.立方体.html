@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立方体</title>
+    <style>
+        .cube {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 50px auto;
+            perspective: 800px;
+            transform-style: preserve-3d;
+            animation: rotate 20s infinite alternate linear;
+        }
+        .cube > div {
+            /* width: 200px;
+            height: 200px; */
+            position: absolute;
+            opacity: 0.7;
+        }
+        .cube > div > img {
+            width: 200px;
+            height: 200px;
+            vertical-align: top;
+        }
+        .box1 {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box2 {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .box3 {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box4 {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .box5 {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .box6 {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        @keyframes rotate {
+            form {
+                transform: rotateX(0) rotateZ(0);
+            }
+            to {
+                transform: rotateX(1turn) rotateZ(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="box1">
+            <img src="./image/美国队长.webp" alt="">
+        </div>
+        <div class="box2">
+            <img src="./image/钢铁侠.webp" alt="">
+        </div>
+        <div class="box3">
+            <img src="./image/绯红女巫.webp" alt="">
+        </div>
+        <div class="box4">
+            <img src="./image/绿巨人.webp" alt="">
+        </div>
+        <div class="box5">
+            <img src="./image/黑寡妇.webp" alt="">
+        </div>
+        <div class="box6">
+            <img src="./image/灭霸.webp" alt="">
+        </div>
+    </div>
+</body>
+</html>

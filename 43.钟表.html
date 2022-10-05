@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钟表</title>
+    <style>
+        .box1 {
+            width: 477px;
+            height: 475px;
+            /* border: 10px solid #000; */
+            background-image: url(./image/表盘.webp);
+            background-size: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .box1 > div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .hour-wapper {
+            width: 100%;
+            height: 60%;
+            /* background-color: #bfa; */
+            animation: run 216000 inherit infinite;
+        }
+        .hour {
+            width: 6px;
+            height: 50%;
+            background-color: #000;
+            margin: 0 auto;
+        }
+        .min-wapper {
+            width: 100%;
+            height: 80%;
+            /* background-color: #bfa; */
+            animation: run 3600s steps(60) infinite;
+        }
+        .min {
+            width: 4px;
+            height: 50%;
+            background-color: #000;
+            margin: 0 auto;
+        }
+        .sec-wapper {
+            width: 100%;
+            height: 95%;
+            /* background-color: #bfa; */
+            animation: run 60s steps(60) infinite;
+        }
+        .sec {
+            width: 2px;
+            height: 50%;
+            background-color: #f00;
+            margin: 0 auto;
+        }
+        @keyframes run {
+            from {
+                transform: rotateZ(0);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="hour-wapper">
+            <div class="hour"></div>
+        </div>
+        <div class="min-wapper">
+            <div class="min"></div>
+        </div>
+        <div class="sec-wapper">
+            <div class="sec"></div>
+        </div>
+    </div>
+</body>
+</html>
